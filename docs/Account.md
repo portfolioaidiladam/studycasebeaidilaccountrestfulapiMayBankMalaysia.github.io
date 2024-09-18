@@ -1,6 +1,6 @@
-# Stock API Spec
+# Accout API Spec
 
-## Create Stock
+## Create Accout
 
 Endpoint : POST /api/stock/create
 
@@ -37,7 +37,7 @@ Response Body (Failed) :
   "errors" : "Stock is not found"
 }
 ```
-## Get Stock
+## Get Accout
 
 Endpoint : GET /api/stock
 
@@ -54,7 +54,7 @@ Response Body (Success) :
   }
 }
 ```
-## Get Stock Detail
+## Get Accout Detail
 
 Endpoint : GET /api/stock/{id}
 
@@ -79,7 +79,7 @@ Response Body (Failed) :
 }
 ```
 
-## Update Stock
+## Update Accout
 
 Endpoint : PUT /api/stock/{id}
 
@@ -108,7 +108,7 @@ Response Body (Success) :
 }
 ```
 
-## Remove Stock
+## Remove Accout
 
 Endpoint : DELETE /api/stock/{id}
 
