@@ -1,4 +1,4 @@
-# Accout API Spec
+# Account API Spec
 
 ## Create Accout
 
@@ -37,7 +37,7 @@ Response Body (Failed) :
   "errors" : "Stock is not found"
 }
 ```
-## Get Accout
+## Get Account
 
 Endpoint : GET /api/stock
 
@@ -54,7 +54,7 @@ Response Body (Success) :
   }
 }
 ```
-## Get Accout Detail
+## Get Account Detail
 
 Endpoint : GET /api/stock/{id}
 
@@ -79,7 +79,7 @@ Response Body (Failed) :
 }
 ```
 
-## Update Accout
+## Update Account
 
 Endpoint : PUT /api/stock/{id}
 
@@ -108,7 +108,7 @@ Response Body (Success) :
 }
 ```
 
-## Remove Accout
+## Remove Account
 
 Endpoint : DELETE /api/stock/{id}
 
