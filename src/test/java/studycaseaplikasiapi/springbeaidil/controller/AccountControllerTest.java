@@ -29,7 +29,7 @@ public class AccountControllerTest {
 
     @Test
     public void testGetAccountByCustomerId() throws Exception {
-        // Prepare mock data
+
         AccountDTO mockAccount = AccountDTO.builder()
                 .id(1L)
                 .customerId("12345")
@@ -37,10 +37,10 @@ public class AccountControllerTest {
                 .description("Mock Account")
                 .build();
 
-        // Mock the service call
+
         when(accountService.getAccountByCustomerId("12345")).thenReturn(mockAccount);
 
-        // Perform the GET request and verify the response
+
         mockMvc.perform(MockMvcRequestBuilders.get("/api/accounts/{customerId}", "12345"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.customerId").value("12345"))
@@ -50,7 +50,7 @@ public class AccountControllerTest {
 
     @Test
     public void testGetAccountByAccountNumber() throws Exception {
-        // Prepare mock data
+
         AccountDTO mockAccount = AccountDTO.builder()
                 .id(2L)
                 .customerId("54321")
@@ -58,10 +58,10 @@ public class AccountControllerTest {
                 .description("Another Mock Account")
                 .build();
 
-        // Mock the service call
+
         when(accountService.getAccountByAccountNumber("123456")).thenReturn(mockAccount);
 
-        // Perform the GET request and verify the response
+
         mockMvc.perform(MockMvcRequestBuilders.get("/api/accounts/accountNumber/{accountNumber}", "123456"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.customerId").value("54321"))
@@ -71,13 +71,8 @@ public class AccountControllerTest {
 
     @Test
     public void testUpdateAccount() throws Exception {
-        // Prepare the data to update the account
         String updateJson = "{ \"description\": \"Updated Description\" }";
 
-        // Mock the update call
-        // No need to mock a return, as the update is void in this case
-
-        // Perform the PUT request and verify the response
         mockMvc.perform(MockMvcRequestBuilders.put("/api/accounts/{id}", 1L)
                         .contentType("application/json")
                         .content(updateJson))

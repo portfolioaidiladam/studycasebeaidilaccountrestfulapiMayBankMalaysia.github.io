@@ -21,5 +21,4 @@ public class AccountDTO {
     @Size(max = 200)
     private String description;
 
-    // Getters and Setters
 }

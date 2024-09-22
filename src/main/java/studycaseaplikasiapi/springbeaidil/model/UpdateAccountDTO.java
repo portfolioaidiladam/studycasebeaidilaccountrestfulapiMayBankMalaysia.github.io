@@ -12,5 +12,4 @@ import lombok.NoArgsConstructor;
 public class UpdateAccountDTO {
     private String description;
 
-    // Getters and Setters
 }

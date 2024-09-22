@@ -25,5 +25,4 @@ public class Account {
     @Column(name = "last_updated")
     private Timestamp lastUpdated;
 
-    // Getters and Setters
 }
