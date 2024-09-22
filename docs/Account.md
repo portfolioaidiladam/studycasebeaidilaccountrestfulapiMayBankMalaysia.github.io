@@ -1,116 +1,57 @@
 # Account API Spec
 
-## Create Accout
-
-Endpoint : POST /api/stock/create
-
-Request Body :
-
-```json
-{
-  "namaBarang" : "Barang A",
-  "jumlahStok" : "100",
-  "nomorSeri" : "A123",
-  "createdBy" : "user1",
-  "id": 1
-}
-```
-
-Response Body (Success) :
-
-```json
-{
-  "data" : {
-    "id" : "randomstring",
-    "namaBarang" : "Barang A",
-    "jumlahStok" : "100",
-    "nomorSeri" : "A123",
-    "createdBy" : "user1",
-  }
-}
-```
-
-Response Body (Failed) :
-
-```json
-{
-  "errors" : "Stock is not found"
-}
-```
 ## Get Account
 
-Endpoint : GET /api/stock
-
-
-Response Body (Success) :
-
-```json
-{
-  "data" : {
-    "id": 1,
-    "namaBarang": "Product A",
-    "jumlahStok": 10,
-    "nomorSeri": "SER12345"
-  }
-}
-```
-## Get Account Detail
-
-Endpoint : GET /api/stock/{id}
+Endpoint : GET /api/accounts/{customerId}
 
 Response Body (Success) :
 
 ```json
 {
-  "data" : {
-    "id": 1,
-    "namaBarang": "Product A",
-    "jumlahStok": 10,
-    "nomorSeri": "SER12345"
-  }
+  "customerId" : "12345",
+  "accountNumber" : "100",
+  "description" : "A123"
 }
 ```
-
 Response Body (Failed) :
 
 ```json
 {
-  "errors" : "Stock is not found"
+  "errors" : "Accounts is not found"
+}
+```
+## Get Account Number
+
+Endpoint : GET /api/accounts/accountNumber/{accountNumber}
+
+
+Response Body (Success) :
+
+```json
+{
+  "customerId" : "12345",
+  "accountNumber" : "100",s
+  "description" : "A123"
 }
 ```
 
 ## Update Account
 
-Endpoint : PUT /api/stock/{id}
+Endpoint : PUT /api/accounts/{id}
 
 
 Request Body :
 
 ```json
 {
-  "id": 1,
-  "namaBarang": "Updated Product",
-  "jumlahStok": 5,
-  "nomorSeri": "SER12345"
+  "description" : "A123"
 }
 ```
 
-Response Body (Success) :
 
-```json
-{
-  "data" : {
-    "id": 1,
-    "namaBarang": "Updated Product",
-    "jumlahStok": 5,
-    "nomorSeri": "SER12345"
-  }
-}
-```
+## Get All Account Pagination
 
-## Remove Account
-
-Endpoint : DELETE /api/stock/{id}
+Endpoint : GET /api/accounts?page={page}&size={size}
 
 
 Response Body (Success) :
