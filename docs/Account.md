@@ -30,7 +30,7 @@ Response Body (Success) :
 ```json
 {
   "customerId" : "12345",
-  "accountNumber" : "100",s
+  "accountNumber" : "100",
   "description" : "A123"
 }
 ```
