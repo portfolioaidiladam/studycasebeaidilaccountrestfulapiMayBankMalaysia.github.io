@@ -1,5 +1,6 @@
 package studycaseaplikasiapi.springbeaidil.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -13,7 +14,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import static org.mockito.Mockito.*;
-
+@Slf4j
 @SpringBootTest
 @AutoConfigureMockMvc
 @TestPropertySource(locations = "classpath:application-test.properties")
