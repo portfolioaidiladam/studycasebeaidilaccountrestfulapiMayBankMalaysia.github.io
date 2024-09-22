@@ -10,7 +10,7 @@ import java.io.IOException;
 @Component
 public class BatchJob {
 
-    private final String filePath = "path/to/your/textfile.txt";
+    private final String filePath = "src/main/resources/files/dataSource.txt";
 
     @Scheduled(fixedRate = 60000)
     public void processTextFile() {
