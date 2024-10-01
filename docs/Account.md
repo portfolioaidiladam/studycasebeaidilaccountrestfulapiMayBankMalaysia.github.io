@@ -66,6 +66,6 @@ Response Body (Failed) :
 
 ```json
 {
-  "errors" : "Stock is not found"
+  "errors" : "Account is not found"
 }
 ```
